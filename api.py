@@ -1,6 +1,7 @@
 import telebot
+import environ
 
-bot = telebot.TeleBot("7163087906:AAEmvrU6HPIvud-wsWskmpfeYLzSM8bwWTU")
+bot = telebot.TeleBot(env('TG_TOKEN'))
 
 @bot.message_handler(content_types=['text'])
 def send_echo(message):
